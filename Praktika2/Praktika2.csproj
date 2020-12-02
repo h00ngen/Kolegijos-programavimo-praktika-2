@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D33807D3-75CE-486F-BC6E-3DEE295AB5A6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Praktika2</RootNamespace>
+    <AssemblyName>Praktika2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="AdminDestytojoPriskyrimas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDestytojoPriskyrimas.Designer.cs">
+      <DependentUpon>AdminDestytojoPriskyrimas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminGrupesIvedimas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminGrupesIvedimas.Designer.cs">
+      <DependentUpon>AdminGrupesIvedimas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaskaitosIvedimas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPaskaitosIvedimas.Designer.cs">
+      <DependentUpon>AdminPaskaitosIvedimas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupRepository.cs" />
+    <Compile Include="NaudotojuSarasas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NaudotojuSarasas.Designer.cs">
+      <DependentUpon>NaudotojuSarasas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs" />
+    <Compile Include="ProfilisAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfilisAdmin.Designer.cs">
+      <DependentUpon>ProfilisAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfilisDestytojas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfilisDestytojas.Designer.cs">
+      <DependentUpon>ProfilisDestytojas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="UsersRepository.cs" />
+    <Compile Include="PagrindinisLangas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PagrindinisLangas.Designer.cs">
+      <DependentUpon>PagrindinisLangas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrisijungimasAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrisijungimasAdmin.Designer.cs">
+      <DependentUpon>PrisijungimasAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrisijungimasDestytojas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrisijungimasDestytojas.Designer.cs">
+      <DependentUpon>PrisijungimasDestytojas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrisijungimasStudentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrisijungimasStudentas.Designer.cs">
+      <DependentUpon>PrisijungimasStudentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfilisStudentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfilisStudentas.Designer.cs">
+      <DependentUpon>ProfilisStudentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registracija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registracija.Designer.cs">
+      <DependentUpon>Registracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlaptazodisKeitimas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SlaptazodisKeitimas.Designer.cs">
+      <DependentUpon>SlaptazodisKeitimas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminDestytojoPriskyrimas.resx">
+      <DependentUpon>AdminDestytojoPriskyrimas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminGrupesIvedimas.resx">
+      <DependentUpon>AdminGrupesIvedimas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPaskaitosIvedimas.resx">
+      <DependentUpon>AdminPaskaitosIvedimas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NaudotojuSarasas.resx">
+      <DependentUpon>NaudotojuSarasas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagrindinisLangas.resx">
+      <DependentUpon>PagrindinisLangas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrisijungimasAdmin.resx">
+      <DependentUpon>PrisijungimasAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrisijungimasDestytojas.resx">
+      <DependentUpon>PrisijungimasDestytojas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrisijungimasStudentas.resx">
+      <DependentUpon>PrisijungimasStudentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfilisAdmin.resx">
+      <DependentUpon>ProfilisAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfilisDestytojas.resx">
+      <DependentUpon>ProfilisDestytojas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfilisStudentas.resx">
+      <DependentUpon>ProfilisStudentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Registracija.resx">
+      <DependentUpon>Registracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlaptazodisKeitimas.resx">
+      <DependentUpon>SlaptazodisKeitimas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
