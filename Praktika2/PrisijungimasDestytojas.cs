@@ -39,7 +39,7 @@ namespace Praktika2
                 conn.Close();
                 if (check != null && check2 != null)
                 {
-                    ProfilisStudentas prof = new ProfilisStudentas();
+                    ProfilisDestytojas prof = new ProfilisDestytojas(this.textBox1.Text, this.textBox2.Text);
                     prof.ShowDialog();
                 }
                 else

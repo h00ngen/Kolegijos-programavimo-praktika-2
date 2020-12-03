@@ -1,7 +1,7 @@
 ﻿
 namespace Praktika2
 {
-    partial class Registracija
+    partial class AdminVartotojuRegistracija
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace Praktika2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,6 +46,11 @@ namespace Praktika2
             this.label7 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.praktikaDataSet3 = new Praktika2.praktikaDataSet3();
+            this.groupsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupsTableAdapter = new Praktika2.praktikaDataSet3TableAdapters.groupsTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.praktikaDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -188,16 +194,14 @@ namespace Praktika2
             // 
             // textBox6
             // 
+            this.textBox6.DataSource = this.groupsBindingSource;
+            this.textBox6.DisplayMember = "groupname";
             this.textBox6.FormattingEnabled = true;
-            this.textBox6.Items.AddRange(new object[] {
-            "Darbuotojai",
-            "PI19A",
-            "PI20A",
-            "PI20B"});
             this.textBox6.Location = new System.Drawing.Point(239, 264);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(275, 21);
             this.textBox6.TabIndex = 24;
+            this.textBox6.ValueMember = "groupname";
             // 
             // label8
             // 
@@ -210,7 +214,21 @@ namespace Praktika2
             this.label8.TabIndex = 25;
             this.label8.Text = "Vartotojo grupė";
             // 
-            // Registracija
+            // praktikaDataSet3
+            // 
+            this.praktikaDataSet3.DataSetName = "praktikaDataSet3";
+            this.praktikaDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // groupsBindingSource
+            // 
+            this.groupsBindingSource.DataMember = "groups";
+            this.groupsBindingSource.DataSource = this.praktikaDataSet3;
+            // 
+            // groupsTableAdapter
+            // 
+            this.groupsTableAdapter.ClearBeforeFill = true;
+            // 
+            // AdminVartotojuRegistracija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -231,8 +249,11 @@ namespace Praktika2
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
-            this.Name = "Registracija";
+            this.Name = "AdminVartotojuRegistracija";
             this.Text = "Registracija";
+            this.Load += new System.EventHandler(this.AdminVartotojuRegistracija_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.praktikaDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +277,8 @@ namespace Praktika2
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox textBox6;
         private System.Windows.Forms.Label label8;
+        private praktikaDataSet3 praktikaDataSet3;
+        private System.Windows.Forms.BindingSource groupsBindingSource;
+        private praktikaDataSet3TableAdapters.groupsTableAdapter groupsTableAdapter;
     }
 }

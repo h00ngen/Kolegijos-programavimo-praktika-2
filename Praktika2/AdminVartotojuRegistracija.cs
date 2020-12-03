@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace Praktika2
 {
-    public partial class Registracija : Form
+    public partial class AdminVartotojuRegistracija : Form
     {
         private SqlConnection conn;
 
-        public Registracija()
+        public AdminVartotojuRegistracija()
         {
             conn = new SqlConnection(@"Server=.;Database=praktika;Integrated Security=true;");
             InitializeComponent();
@@ -46,7 +46,7 @@ namespace Praktika2
 
                 else
                 {
-                    MessageBox.Show($"Naujas vartotojas sėkmingai pridėtas prie sistemos!");
+                    MessageBox.Show($"Naujas vartotojas {textBox1.Text} sėkmingai pridėtas prie sistemos!");
 
                     User user = new User(textBox1.Text, textBox2.Text, dateTimePicker1.Value, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text);
                     UsersRepository duom = new UsersRepository();
@@ -57,6 +57,12 @@ namespace Praktika2
             {
                 MessageBox.Show(xc.Message);
             }
+        }
+
+        private void AdminVartotojuRegistracija_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'praktikaDataSet3.groups' table. You can move, or remove it, as needed.
+            this.groupsTableAdapter.Fill(this.praktikaDataSet3.groups);
         }
     }
 }

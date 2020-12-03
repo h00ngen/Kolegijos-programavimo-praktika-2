@@ -28,7 +28,7 @@ namespace Praktika2
             cmd.Parameters.AddWithValue("@groupname", this.textBoxGrupesIvedimas.Text);
             conn.Open();
             cmd.ExecuteNonQuery();
-            MessageBox.Show("test test test test");
+            MessageBox.Show($"Grupe {textBoxGrupesIvedimas.Text} sekmingai ivesta i sistema!");
             conn.Close();
         }
     }

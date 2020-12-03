@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,11 +68,124 @@
     <Compile Include="AdminGrupesIvedimas.Designer.cs">
       <DependentUpon>AdminGrupesIvedimas.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminGrupesSalinimas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminGrupesSalinimas.Designer.cs">
+      <DependentUpon>AdminGrupesSalinimas.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminPaskaitosIvedimas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminPaskaitosIvedimas.Designer.cs">
       <DependentUpon>AdminPaskaitosIvedimas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaskaitosSalinimas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPaskaitosSalinimas.Designer.cs">
+      <DependentUpon>AdminPaskaitosSalinimas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminVartotojoSalinimas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminVartotojoSalinimas.Designer.cs">
+      <DependentUpon>AdminVartotojoSalinimas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DestytojasPazymioIvedimas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DestytojasPazymioIvedimas.Designer.cs">
+      <DependentUpon>DestytojasPazymioIvedimas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentasPerziuretiPazymius.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentasPerziuretiPazymius.Designer.cs">
+      <DependentUpon>StudentasPerziuretiPazymius.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lectures.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="marks.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="praktikaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>praktikaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="praktikaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>praktikaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="praktikaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>praktikaDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="praktikaDataSet3.cs">
+      <DependentUpon>praktikaDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="praktikaDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>praktikaDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="praktikaDataSetIvestiStudentuiPazymi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>praktikaDataSetIvestiStudentuiPazymi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="praktikaDataSetPasirinkitePaskaita.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>praktikaDataSetPasirinkitePaskaita.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="praktikaDataSetPasirinktiDalykaPazymiams.cs">
+      <DependentUpon>praktikaDataSetPasirinktiDalykaPazymiams.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="praktikaDataSetPasirinktiDalykaPazymiams.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>praktikaDataSetPasirinktiDalykaPazymiams.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="praktikaDataSetPaskaituTrynimas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>praktikaDataSetPaskaituTrynimas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="praktikaDataSetRodytiPazymius.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>praktikaDataSetRodytiPazymius.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="praktikaDataSetVartotojoSalinimas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>praktikaDataSetVartotojoSalinimas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StudentasPazymiai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentasPazymiai.Designer.cs">
+      <DependentUpon>StudentasPazymiai.cs</DependentUpon>
     </Compile>
     <Compile Include="GroupRepository.cs" />
     <Compile Include="NaudotojuSarasas.cs">
@@ -119,11 +241,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registracija.cs">
+    <Compile Include="AdminVartotojuRegistracija.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registracija.Designer.cs">
-      <DependentUpon>Registracija.cs</DependentUpon>
+    <Compile Include="AdminVartotojuRegistracija.Designer.cs">
+      <DependentUpon>AdminVartotojuRegistracija.cs</DependentUpon>
     </Compile>
     <Compile Include="SlaptazodisKeitimas.cs">
       <SubType>Form</SubType>
@@ -137,8 +259,20 @@
     <EmbeddedResource Include="AdminGrupesIvedimas.resx">
       <DependentUpon>AdminGrupesIvedimas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminGrupesSalinimas.resx">
+      <DependentUpon>AdminGrupesSalinimas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminPaskaitosIvedimas.resx">
       <DependentUpon>AdminPaskaitosIvedimas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPaskaitosSalinimas.resx">
+      <DependentUpon>AdminPaskaitosSalinimas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminVartotojoSalinimas.resx">
+      <DependentUpon>AdminVartotojoSalinimas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DestytojasPazymioIvedimas.resx">
+      <DependentUpon>DestytojasPazymioIvedimas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NaudotojuSarasas.resx">
       <DependentUpon>NaudotojuSarasas.cs</DependentUpon>
@@ -173,12 +307,139 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Registracija.resx">
-      <DependentUpon>Registracija.cs</DependentUpon>
+    <EmbeddedResource Include="AdminVartotojuRegistracija.resx">
+      <DependentUpon>AdminVartotojuRegistracija.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SlaptazodisKeitimas.resx">
       <DependentUpon>SlaptazodisKeitimas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StudentasPazymiai.resx">
+      <DependentUpon>StudentasPazymiai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentasPerziuretiPazymius.resx">
+      <DependentUpon>StudentasPerziuretiPazymius.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="praktikaDataSet.xsc">
+      <DependentUpon>praktikaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>praktikaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="praktikaDataSet.xss">
+      <DependentUpon>praktikaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSet1.xsc">
+      <DependentUpon>praktikaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>praktikaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="praktikaDataSet1.xss">
+      <DependentUpon>praktikaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSet2.xsc">
+      <DependentUpon>praktikaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>praktikaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="praktikaDataSet2.xss">
+      <DependentUpon>praktikaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSet3.xsc">
+      <DependentUpon>praktikaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>praktikaDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="praktikaDataSet3.xss">
+      <DependentUpon>praktikaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSetIvestiStudentuiPazymi.xsc">
+      <DependentUpon>praktikaDataSetIvestiStudentuiPazymi.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSetIvestiStudentuiPazymi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>praktikaDataSetIvestiStudentuiPazymi.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="praktikaDataSetIvestiStudentuiPazymi.xss">
+      <DependentUpon>praktikaDataSetIvestiStudentuiPazymi.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSetPasirinkitePaskaita.xsc">
+      <DependentUpon>praktikaDataSetPasirinkitePaskaita.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSetPasirinkitePaskaita.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>praktikaDataSetPasirinkitePaskaita.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="praktikaDataSetPasirinkitePaskaita.xss">
+      <DependentUpon>praktikaDataSetPasirinkitePaskaita.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSetPasirinktiDalykaPazymiams.xsc">
+      <DependentUpon>praktikaDataSetPasirinktiDalykaPazymiams.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSetPasirinktiDalykaPazymiams.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>praktikaDataSetPasirinktiDalykaPazymiams.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="praktikaDataSetPasirinktiDalykaPazymiams.xss">
+      <DependentUpon>praktikaDataSetPasirinktiDalykaPazymiams.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSetPaskaituTrynimas.xsc">
+      <DependentUpon>praktikaDataSetPaskaituTrynimas.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSetPaskaituTrynimas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>praktikaDataSetPaskaituTrynimas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="praktikaDataSetPaskaituTrynimas.xss">
+      <DependentUpon>praktikaDataSetPaskaituTrynimas.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSetRodytiPazymius.xsc">
+      <DependentUpon>praktikaDataSetRodytiPazymius.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSetRodytiPazymius.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>praktikaDataSetRodytiPazymius.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="praktikaDataSetRodytiPazymius.xss">
+      <DependentUpon>praktikaDataSetRodytiPazymius.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSetVartotojoSalinimas.xsc">
+      <DependentUpon>praktikaDataSetVartotojoSalinimas.xsd</DependentUpon>
+    </None>
+    <None Include="praktikaDataSetVartotojoSalinimas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>praktikaDataSetVartotojoSalinimas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="praktikaDataSetVartotojoSalinimas.xss">
+      <DependentUpon>praktikaDataSetVartotojoSalinimas.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\lectures.datasource" />
+    <None Include="Properties\DataSources\marks.datasource" />
+    <None Include="Properties\DataSources\StudentasPazymiai.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -191,6 +452,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

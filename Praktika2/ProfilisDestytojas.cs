@@ -7,14 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Praktika2
 {
     public partial class ProfilisDestytojas : Form
     {
-        public ProfilisDestytojas()
+        private SqlConnection conn;
+        string vardas;
+
+        public ProfilisDestytojas(string name, string surname)
         {
+            conn = new SqlConnection(@"Server=.;Database=praktika;Integrated Security=true;");
             InitializeComponent();
+            vardasDestytojas.Text = name;
+            pavardeDestytojas.Text = surname;
+            this.vardas = name;
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -33,7 +41,7 @@ namespace Praktika2
             }
             catch (Exception)
             {
-                MessageBox.Show("Not a good picture");
+                MessageBox.Show("Netinkama nuotrauka. Pasirinkite kitą");
             }
         }
 
@@ -41,6 +49,12 @@ namespace Praktika2
         {
             SlaptazodisKeitimas Slaptazodis = new SlaptazodisKeitimas();
             Slaptazodis.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DestytojasPazymioIvedimas pazymioIvedimas = new DestytojasPazymioIvedimas(vardas);
+            pazymioIvedimas.ShowDialog();
         }
     }
 }
